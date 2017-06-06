@@ -1,0 +1,17 @@
+<h1>All users</h1>
+
+<ul class="users">
+	<% @users.each do |user| %>
+    <li>
+    	<strong><p>User info:</p></strong>
+    	<%= image_tag("#{user.picture}", :size => "100x100") %>
+    	<br>
+      <%= user.name %>
+      <p><strong>Bio:</strong> <%= user.bio %></p>
+      <strong><p>Comments: <%= user.comments.count %></p></strong>
+      <strong><p>Followers: <%= user.followers.count %></p></strong>
+    </li>
+    <br>
+    <hr>
+  <% end %>
+</ul>
